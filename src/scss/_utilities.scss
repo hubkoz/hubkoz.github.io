@@ -6,3 +6,9 @@
     position: absolute;
     left: -10000px;
 }
+
+.fade-scroll {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  

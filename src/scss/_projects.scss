@@ -1,0 +1,11 @@
+.projects {
+    
+    @include flex-center;
+    flex-direction: column;
+
+    .project {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+}
