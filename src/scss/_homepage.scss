@@ -1,0 +1,6 @@
+.homepage {
+    h1 {
+        @include absolute-center;
+        top: 45%;
+    }
+}

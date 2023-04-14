@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log({name:"Alien Shooter",img:"",code:"https://github.com/hubkoz/alien_shooter",page:"https://hubkoz.github.io/alien_shooter/"}),console.log({name:"Click",img:"",code:"https://github.com/hubkoz/click",page:"https://hubkoz.github.io/click/"})})();
