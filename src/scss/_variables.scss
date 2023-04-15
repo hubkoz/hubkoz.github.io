@@ -1,8 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Ballet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+/* colors */
+$color-font: #000;
+$color-font-name: #14213d;
+$color-bg: #edf6f9;
+$color-bg-2: #f5f5f5;
+$color-darken: rgb(243, 222, 186, 0.4);
+$colog-bg-project: #a6e1e4;
 
 /* font */
 $font-size: 1rem;
 $font-size-l: $font-size * 2;
 $font-size-xl: $font-size * 3;
 $font-size-xxl: $font-size * 4;
+
 $font-family-name: 'Great Vibes', cursive;
+$font-family-year: 'Puppies Play', cursive;
+//$font-family-month: 'Ballet', cursive;
+$font-family-month: 'Arizonia', cursive;
+$font-family-project: 'Vujahday Script', cursive;
+
+/* padding */
+$padding: 12px;
+$padding-xxl: $padding * 4;
+$padding-xl: $padding * 2;
+$padding-l: $padding * 1.5;
+$padding-s: $padding * 0.8;
+$padding-xs: $padding * 0.5;

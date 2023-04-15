@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Ballet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap");
+/* colors */
 /* font */
+/* padding */
 /* || RESET */
 * {
   margin: 0;
@@ -19,25 +25,36 @@ input, button, textarea {
   color: inherit;
 }
 
-body {
+html, body {
   width: 100vw;
   height: 100vh;
-  background-color: #333;
-  color: #f5f5f5;
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#edf6f9), to(#f5f5f5));
+  background: linear-gradient(#edf6f9, #f5f5f5);
+  color: #000;
 }
 
 .homepage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 45%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
 }
 .homepage h1 {
-  font-size: 5.2rem;
+  font-size: 2.6rem;
   font-family: "Great Vibes", cursive;
-  letter-spacing: normal;
+  color: #14213d;
 }
 .homepage .stack {
   margin-top: 1.3rem;
@@ -50,14 +67,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.3rem;
+  gap: 1rem;
 }
 .homepage .stack img {
-  width: 3.5rem;
+  width: 2rem;
   height: auto;
 }
 
-.projects {
+.projects .year-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,8 +88,29 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100vw;
 }
-.projects .project {
+.projects .year-container .year {
+  padding-top: 48px;
+  font-family: "Puppies Play", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.projects .year-container .month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Arizonia", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.projects .year-container .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +124,119 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #a6e1e4;
+  width: 80vw;
+  margin: 1rem 0;
+  font-family: "Vujahday Script", cursive;
+}
+.projects .year-container .project h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-bottom: 9.6px;
+}
+.projects .year-container .project h1::before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-image: url("./img/pushpin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+.projects .year-container .project p {
+  padding-top: 9.6px;
+}
+.projects .year-container .project .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 5em;
+  width: 85%;
+}
+.projects .year-container .project .buttons .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 222, 186, 0.4);
+  border: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+  font-size: 1.35rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.projects .year-container .project .buttons .btn:hover {
+  cursor: default;
+  background-color: transparent;
+}
+.projects .year-container .project .cyberpunk-ninjas-game-buttons {
+  background-image: url("./img/projects/ninjas_game.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.projects .year-container .project .ravens-buttons {
+  background-image: url("./img/projects/ravens1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.projects .year-container .project .alien-shooter-buttons {
+  background-image: url("./img/projects/alien_shooter.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.projects .year-container .project .click-buttons {
+  background-image: url("./img/projects/click.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top 30px;
+}
+.projects .year-container .project .cyberpunk-ninjas-website-buttons {
+  background-image: url("./img/projects/cyberpunk_ninjas_website.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top 300px;
+}
+.projects .year-container .project figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  padding: 6px 0;
+}
+.projects .year-container .project figure img {
+  height: 20px;
+  width: auto;
 }
 
 .nowrap {
