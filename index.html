@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/index.css" />
+    <link rel="icon" href="./public/img/diary.png" />
     <title>Projects Diary</title>
   </head>
   <body>
-    <section class="homepage fade-scroll">
+    <div class="vh"></div>
+    <section class="homepage">
       <h1 class="nowrap">Hubert Kozłowski</h1>
       <figure class="stack">
         <img src="./public/img/stack/ts.png" alt="TypeScript" />
@@ -19,8 +21,7 @@
         <figcaption class="offscreen">My Tech Stack</figcaption>
       </figure>
     </section>
-
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="year-container">
         <h1 class="year">2023</h1>
         <div class="month-container">
@@ -41,7 +42,11 @@
                 >Code</a
               >
             </div>
-            <p>Cyberpunk Ninjas description</p>
+            <p>
+              Multiple characters, many dialogues, couple locations, weapons to
+              buy and enemies to defeat. In a word - getting familiar with
+              TypeScript.
+            </p>
             <figure>
               <img src="./public/img/stack/ts.png" alt="js logo" />
               <img src="./public/img/stack/sass.png" alt="css logo" />
@@ -70,7 +75,10 @@
                 >Code</a
               >
             </div>
-            <p>Ravens Shoot description</p>
+            <p>
+              Point and shoot game made with object oriented programming, canvas
+              and sprite sheets. Styling made using SCSS. Pow, pow!
+            </p>
             <figure>
               <img src="./public/img/stack/js.png" alt="js logo" />
               <img src="./public/img/stack/sass.png" alt="css logo" />
@@ -99,7 +107,10 @@
                 >Code</a
               >
             </div>
-            <p>Alien Shooter description</p>
+            <p>
+              Improving my JavaScript skills with this galactic point and shoot
+              game.
+            </p>
             <figure>
               <img src="./public/img/stack/js.png" alt="js logo" />
               <img src="./public/img/stack/css.png" alt="css logo" />
@@ -128,7 +139,11 @@
                 >Code</a
               >
             </div>
-            <p>Click description</p>
+            <p>
+              After I learned basics of JavaScript I wanted to build something
+              on my own. Here's what I came up with - Click Game. My first
+              JavaScript project ever. Mouse required.
+            </p>
             <figure>
               <img src="./public/img/stack/js.png" alt="js logo" />
               <img src="./public/img/stack/css.png" alt="css logo" />
@@ -150,7 +165,12 @@
               <a href="#" class="demo-btn btn">Demo</a>
               <a href="#" class="code-btn btn">Code</a>
             </div>
-            <p>Cyberpunk Ninjas Website description</p>
+            <p>
+              My first website after I watched a bunch of HTML and CSS
+              tutorials. The website will take you on a tour of a bustling
+              cyberpunk city Wyszkow and will tell you the heroic story of it's
+              skilled ninjas.
+            </p>
             <figure>
               <img src="./public/img/stack/css.png" alt="css logo" />
               <img src="./public/img/stack/html.png" alt="html logo" />
@@ -162,5 +182,7 @@
         </div>
       </div>
     </section>
+    <button id="back-top" class="back-top">Back to Top</button>
+    <script src="./public/index.js"></script>
   </body>
 </html>

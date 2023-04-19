@@ -1,4 +1,6 @@
 .projects {
+
+    padding-bottom: $padding;
     
     .year-container {
         @include flex-center;
@@ -11,19 +13,19 @@
             // top: 0;
             // z-index: 2;
             padding-top: $padding-xxl;
-            font-family: $font-family-year;
-            font-size: $font-size-xxl;
-            font-weight: 400;
+            font-size: $font-size-xl * 0.8;
+            font-weight: 300;
+            font-style: italic;
         }
     
         .month {
             @include flex-center;
-            font-family: $font-family-month;
-            font-size: $font-size-l;
+            font-size: $font-size-l * 0.8;
             // position: sticky;
             // top: 20px;
             // z-index: 1;
-            font-weight: 400;
+            font-weight: 300;
+            padding-top: 20px;
         }
     
         .project {
@@ -32,46 +34,52 @@
             flex-direction: column;
             background-color: $colog-bg-project;
             width: 80vw;
+            height: fit-content;
             margin: 1rem 0;
-            font-family: $font-family-project;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 17px;
+                height: 17px;
+                background-image: url('./img/pushpin.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: auto;
+                position: relative;
+                top: -5px;
+                left: 5px;
+                display: none;
+            }
 
             h1 {
-                font-weight: 400;
-                font-size: $font-size*1.5;
+                font-weight: 500;
+                font-size: $font-size*1.4;
                 padding-bottom: $padding-s;
-
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 17px;
-                    height: 17px;
-                    background-image: url('./img/pushpin.png');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    margin: auto;
-                    position: relative;
-                    top: -5px;
-                    left: 5px;
-                }
             }
 
             p {
                 padding-top: $padding-s;
+                width: 83%;
+                text-align: justify;
+                font-weight: 400;
+                line-height: 20px;
             }
             
             .buttons {
                 @include flex-center;
                 justify-content: space-evenly;
                 height: 5em;
-                width: 85%; 
+                width: 85%;
+                font-weight: 200;
+                text-transform: uppercase;
 
                 .btn {
                     @include flex-center;
                     @include button-project;
                     text-decoration: none;
                     color: inherit;
-                    font-weight: 400;
-                    font-size: $font-size*1.35;
+                    font-size: $font-size * 1.35;
                     transition: background-color 0.3s ease;
 
                     &:hover {
@@ -82,7 +90,7 @@
             }
 
             .cyberpunk-ninjas-game-buttons {
-                background-image: url('./img/projects/ninjas_game.png');
+                background-image: url('./img/projects/ninjas_game_2.png');
                 @include background-buttons;
                 background-position: center;
             }            
@@ -113,12 +121,13 @@
 
             figure {
                 @include flex-center;
-                gap: 5px;
+                gap: 10px;
                 img {
                     height: 20px;
                     width: auto;
                 }
-                padding: $padding-xs 0;
+                padding-top: $padding;
+                padding-bottom: $padding;
             }
 
         }
@@ -127,4 +136,15 @@
     // visibility: hidden;
     //display: none;
 
+}
+
+.back-top {
+    @include flex-center;
+    justify-content: center;
+    font-size: $font-size-l * 0.8;
+    color: $color-font;
+    border: none;
+    margin: auto;
+    background: transparent;
+    font-weight: 300;
 }

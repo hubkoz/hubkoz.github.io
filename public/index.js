@@ -1,1 +1,1 @@
-(()=>{"use strict";document.querySelector(".homepage")})();
+(()=>{"use strict";var e=document.querySelector(".homepage"),t=e.getBoundingClientRect().height,o=document.getElementById("back-top"),n=document.getElementById("projects");o.addEventListener("click",(function(){n&&n.scrollIntoView({behavior:"smooth",block:"start"})})),window.addEventListener("scroll",(function(){var o=window.scrollY||document.documentElement.scrollTop,n=(t-.4*o)/t;e.style.opacity=n.toString()}))})();

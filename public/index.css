@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Ballet&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,500;1,400&display=swap");
 /* colors */
 /* font */
 /* padding */
@@ -25,31 +23,31 @@ input, button, textarea {
   color: inherit;
 }
 
-html, body {
+html {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#edf6f9), to(#f5f5f5));
   background: linear-gradient(#edf6f9, #f5f5f5);
   color: #000;
+  overflow-x: hidden;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  padding-bottom: 3rem;
+}
+
+.vh {
+  height: 100vh;
 }
 
 .homepage {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
 }
 .homepage h1 {
   font-size: 2.6rem;
@@ -74,6 +72,9 @@ html, body {
   height: auto;
 }
 
+.projects {
+  padding-bottom: 12px;
+}
 .projects .year-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,9 +93,9 @@ html, body {
 }
 .projects .year-container .year {
   padding-top: 48px;
-  font-family: "Puppies Play", cursive;
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-style: italic;
 }
 .projects .year-container .month {
   display: -webkit-box;
@@ -106,9 +107,9 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Arizonia", cursive;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding-top: 20px;
 }
 .projects .year-container .project {
   display: -webkit-box;
@@ -124,31 +125,38 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #a6e1e4;
+  background-color: transparent;
   width: 80vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 1rem 0;
-  font-family: "Vujahday Script", cursive;
 }
-.projects .year-container .project h1 {
-  font-weight: 400;
-  font-size: 1.5rem;
-  padding-bottom: 9.6px;
-}
-.projects .year-container .project h1::before {
+.projects .year-container .project::before {
   content: "";
   display: block;
   width: 17px;
   height: 17px;
   background-image: url("./img/pushpin.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
   position: relative;
   top: -5px;
   left: 5px;
+  display: none;
+}
+.projects .year-container .project h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding-bottom: 9.6px;
 }
 .projects .year-container .project p {
   padding-top: 9.6px;
+  width: 83%;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 20px;
 }
 .projects .year-container .project .buttons {
   display: -webkit-box;
@@ -165,6 +173,8 @@ html, body {
           justify-content: space-evenly;
   height: 5em;
   width: 85%;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 .projects .year-container .project .buttons .btn {
   display: -webkit-box;
@@ -182,7 +192,6 @@ html, body {
   border: none;
   text-decoration: none;
   color: inherit;
-  font-weight: 400;
   font-size: 1.35rem;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
@@ -192,7 +201,7 @@ html, body {
   background-color: transparent;
 }
 .projects .year-container .project .cyberpunk-ninjas-game-buttons {
-  background-image: url("./img/projects/ninjas_game.png");
+  background-image: url("./img/projects/ninjas_game_2.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -231,12 +240,32 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5px;
-  padding: 6px 0;
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .projects .year-container .project figure img {
   height: 20px;
   width: auto;
+}
+
+.back-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #000;
+  border: none;
+  margin: auto;
+  background: transparent;
+  font-weight: 300;
 }
 
 .nowrap {
@@ -254,7 +283,109 @@ html, body {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* tablets */
 /* horizontal phone */
+@media screen and (max-height: 480px) and (max-width: 915px) {
+  .projects .year-container .project {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projects .year-container .project::before {
+    top: -8px;
+  }
+  .projects .year-container .project .buttons {
+    height: 100px;
+  }
+  .projects .year-container .project .cyberpunk-ninjas-website-buttons {
+    background-position: center;
+  }
+}
+/* tablets */
+@media screen and (min-width: 768px) {
+  .homepage h1 {
+    font-size: 4rem;
+  }
+  .homepage .stack img {
+    width: 3rem;
+  }
+  .projects .year-container .year {
+    font-size: 3.6rem;
+  }
+  .projects .year-container .month {
+    font-size: 2.6rem;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+  .projects .year-container .project {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projects .year-container .project::before {
+    top: -8px;
+  }
+  .projects .year-container .project .buttons {
+    height: 200px;
+  }
+  .projects .year-container .project .cyberpunk-ninjas-website-buttons {
+    background-position: center;
+  }
+  .projects .year-container .project h1 {
+    font-size: 2.2rem;
+    padding-bottom: 12px;
+  }
+  .projects .year-container .project p {
+    padding-top: 12px;
+    font-size: 1.6rem;
+    line-height: 30px;
+  }
+  .projects .year-container .project .buttons .btn {
+    font-size: 2.6rem;
+  }
+  .projects .year-container .project figure {
+    gap: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .projects .year-container .project figure img {
+    height: 40px;
+  }
+  .back-top {
+    font-size: 2.6rem;
+  }
+}
 /* tablet horizontal */
+@media screen and (min-height: 480px) and (max-height: 820px) and (min-width: 915px) and (max-width: 1280px) {
+  .projects .year-container .project .buttons {
+    height: 300px;
+  }
+  .projects .year-container .project figure {
+    gap: 40px;
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+  .projects .year-container .project figure img {
+    height: 45px;
+  }
+  .projects .year-container .project p {
+    padding-top: 18px;
+    font-size: 2rem;
+  }
+  .projects .year-container .project h1 {
+    padding-bottom: 12px;
+  }
+}
 /* desktop */
+@media screen and (min-width: 1280px) {
+  .projects .year-container .project .buttons {
+    height: 400px;
+  }
+  .projects .year-container .project figure {
+    gap: 50px;
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+  .projects .year-container .project figure img {
+    height: 50px;
+  }
+}
