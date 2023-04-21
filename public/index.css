@@ -4,6 +4,32 @@
 /* colors */
 /* font */
 /* padding */
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(20, 33, 61, 0.3) #edf6f9;
+}
+
+/* For Internet Explorer */
+* {
+  scrollbar-face-color: rgba(20, 33, 61, 0.3);
+  scrollbar-track-color: #edf6f9;
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: -webkit-gradient(linear, left top, left bottom, from(#edf6f9), to(#f5f5f5));
+  background: linear-gradient(#edf6f9, #f5f5f5);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(20, 33, 61, 0.3);
+}
+
 /* || RESET */
 * {
   margin: 0;

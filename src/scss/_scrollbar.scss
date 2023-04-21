@@ -1,0 +1,23 @@
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $color-font-name-transparent $color-bg;
+  }
+  
+  /* For Internet Explorer */
+  * {
+    scrollbar-face-color: $color-font-name-transparent;
+    scrollbar-track-color: $color-bg;
+  }
+  
+  /* For Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  *::-webkit-scrollbar-track {
+    background: linear-gradient($color-bg, $color-bg-2);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-font-name-transparent;
+  }
+  
